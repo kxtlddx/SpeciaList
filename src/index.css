@@ -1,0 +1,130 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer components {
+  .navbar {
+    @apply
+    px-4 desktop:px-[85px] tablet:px-[39px]
+    flex text-white text-base font-semibold  
+     w-full h-full mx-auto
+    bg-grey-dark;
+  }
+
+  .main {
+    @apply mx-auto flex relative
+    w-full text-white
+    px-4 desktop:px-[85px] tablet:px-[39px];
+  }
+
+  .about {
+    @apply h-[1364px] desktop:h-[1248px] tablet:h-[1542px]
+    w-[320px] desktop:w-[1280px] tablet:w-[792px]
+    px-[15px] desktop:px-[85px] tablet:px-[39px]
+    pt-[48px] desktop:pt-[100px] tablet:pt-[80px]
+  bg-white flex flex-col items-start self-stretch mx-auto
+  }
+  
+  .h1 {
+    @apply text-2xl leading-9 desktop:text-6xl tablet:text-6xl 
+    desktop:leading-[90px] tablet:leading-[90px]
+    font-semibold desktop:font-bold tablet:font-bold;
+  }
+
+  .h2 {
+    @apply text-xl font-semibold
+    desktop:text-[32px] tablet:text-[32px]
+    desktop:font-bold tablet:font-bold;
+  }
+
+  .h3 {
+    @apply font-semibold text-base desktop:text-2xl tablet:text-2xl desktop:leading-9 tablet:leading-9 text-black;
+
+  }
+
+  .subtitle {
+    @apply text-xl leading-[30px] font-semibold;
+
+  }
+
+  .subtitle2 {
+    @apply text-sm font-semibold
+    desktop:text-base
+    tablet:text-base;
+  }
+
+  .title {
+    @apply whitespace-nowrap text-center inline-flex flex-col items-start gap-1
+    pt-[27px] desktop:pt-[128px] tablet:pt-[44px];
+  }
+
+  .description {
+    @apply inline-flex flex-col items-start leading-[30px]  
+    text-sm desktop:text-xl tablet:text-xl text-white
+    font-normal desktop:font-normal tablet:font-normal;
+  }
+
+  .get_in_touch {
+    @apply w-[139px] h-[39px]
+    desktop:w-[188px] desktop:h-[50px]
+    tablet:w-[188px] tablet:h-[50px]
+    text-white text-sm font-semibold
+    desktop:text-base tablet:text-base
+    justify-center flex items-center space-x-2 desktop:space-x-3 tablet:space-x-3 rounded-full bg-lavender flex-row;
+  }
+
+  .get_in_touch:hover {
+    @apply bg-lavender-dark;
+  }
+
+  .get_in_touch:active {
+    @apply border-[3px] border-[#cabffd] bg-lavender-light;
+  }
+
+  .get_in_touch:disabled {
+    @apply bg-grey-light text-grey-dark;
+  }
+
+  .circle {
+    @apply w-[44px] h-[44px] 
+    desktop:w-[60px] desktop:h-[60px] 
+    tablet:w-[60px] tablet:h-[60px] 
+    border-[2px] border-lavender rounded-full flex items-center justify-center; 
+  }
+
+  .form {
+    @apply bg-white w-[300px] h-[625px] 
+    desktop:w-[764px] desktop:h-[567px]
+    tablet:w-[712px] tablet:h-[567px]
+    rounded-2xl;
+  }
+
+  .input {
+    @apply flex py-3 items-start flex-shrink-0 self-stretch rounded-md border border-grey-light bg-white;
+  }
+
+  .email {
+    @apply flex py-3 items-start flex-shrink-0 self-stretch rounded-md border border-red bg-white;
+  }
+  
+  .input:hover {
+    @apply border-green;
+  }
+  
+  .input:active ~ img path{
+    @apply border-lavender fill-lavender;
+  }
+  
+  .input:disabled {
+    @apply bg-grey-light cursor-not-allowed;
+  }
+  
+  .input:valid {
+    @apply border-grey-light;
+  }
+
+  .submit {
+    @apply  w-[147px] h-[50px] justify-center flex flex-row items-center space-x-3 rounded-full bg-grey-light text-grey-dark cursor-not-allowed;
+  }
+
+}
