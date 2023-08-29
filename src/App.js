@@ -3,8 +3,29 @@ import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
 import Navbar from './components/Navbar'
 import Main from './components/Main'
 import About from './components/About'
-import GetInTouch from './components/GetInTouch'
-import Direction6 from './components/Direction6'
+import Direction from './components/Direction'
+import SpecialtyPage from './components/SpecialityPage'
+
+const {
+  mathematicsAndNaturalSciences,
+  engineeringTechnologyAndTechnicalSciences,
+  healthcareAndMedicalSciences,
+  agricultureAndAgriculturalSciences,
+  socialSciences,
+  educationAndPedagogicalSciences,
+  humanities,
+  artAndCulture
+} = require('./components/Specialties.js');
+
+const data = [mathematicsAndNaturalSciences,
+  engineeringTechnologyAndTechnicalSciences,
+  healthcareAndMedicalSciences,
+  agricultureAndAgriculturalSciences,
+  socialSciences,
+  educationAndPedagogicalSciences,
+  humanities,
+  artAndCulture];
+
 
 const App = () => {
   return (
@@ -12,10 +33,11 @@ const App = () => {
       <div>
         <Navbar />
         <Routes>
-          <Route path='/Main' element={<Main />} />
+          <Route path='/' element={<Main data={data} />} />
+          <Route path='/Main' element={<Main data={data} />} />
           <Route path='/About' element={<About />} />
-          <Route path='/About/:direction6' element={<Direction6 />} />
-          <Route path='/GetInTouch' element={<GetInTouch />} />
+          <Route path='/About/:direction' element={<Direction />} />
+          <Route path='/' element={<SpecialtyPage />} />
         </Routes>
       </div>
     </Router>
@@ -23,4 +45,3 @@ const App = () => {
 }
 
 export default App
-
